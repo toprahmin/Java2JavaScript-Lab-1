@@ -43,8 +43,52 @@ function random(){
 
 function powers(n){
   display.innerHTML = "powers()<br>***Output***";
-  var n = 8
-  for(var i = 1; i < 9; i++){
+  for(var i = 1; i <= n ; i++){
     display.innerHTML += "<br>" + Math.pow(2,i);
+  }
+}
+
+function areWeThereYet(){
+  var answer = prompt("Are we there yet?");
+  while(answer != "yes"){
+    answer = prompt("Are we there yet?");
+  }
+}
+
+function triangle(){
+  var star = "";
+  display.innerHTML = "triangle()<br>***Output***";
+  for(var i = 0 ; i < 5; i++){
+    star += "*";
+    display.innerHTML += "<br>" + star;
+  }
+}
+
+
+function tableSquare(){
+  display.innerHTML = "tableSquare()<br>***Output***<br>A4x4tablesquare";
+  for(var i = 1; i <=4; i++){
+    display.innerHTML += "<br>" + "| ";
+    for(var j = 1; j<=4; j++){
+      if(j< 3){
+      display.innerHTML +=  j*i + " | ";
+    } else{
+      display.innerHTML += j*i + " |  ";
+    }
+    }
+  }
+}
+
+function tableSquares(n){
+  display.innerHTML = "tableSquare(6)<br>***Output***<br>A6x6tablesquare";
+  for(var i = 1; i<=n; i++){
+    display.innerHTML += "<br>" + "| ";
+    for (var j= 1; j <= n;j++) {
+      if(j< 3){
+      display.innerHTML +=  j*i + " | ";
+    } else{
+      display.innerHTML += j*i + " |  ";
+    }
+    }
   }
 }
